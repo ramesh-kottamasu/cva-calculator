@@ -738,6 +738,106 @@
 }
 
 /* ═══════════════════════════════════════════
+   Sensitivities panel
+   ═══════════════════════════════════════════ */
+.sens-panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem 0.85rem;
+  animation: fade-up 0.4s ease 0.35s both;
+}
+
+.sens-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.sens-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.sens-method {
+  font-size: 0.62rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.sens-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sens-table th {
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 0 0.75rem 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.sens-table th.col-num {
+  text-align: right;
+  padding-right: 0;
+}
+
+.sens-table td {
+  padding: 0.45rem 0.75rem 0.45rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.sens-table tr:last-child td {
+  border-bottom: none;
+}
+
+.sens-label-cell {
+  font-size: 0.73rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.sens-bump-cell {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-sec);
+  white-space: nowrap;
+}
+
+.sens-val {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-align: right;
+  color: var(--text-sec);
+  white-space: nowrap;
+  padding-right: 0;
+}
+
+.sens-val.val-cost    { color: var(--amber); }
+.sens-val.val-benefit { color: var(--green); }
+
+.sens-note {
+  margin-top: 0.65rem;
+  font-size: 0.62rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════════
    Animations
    ═══════════════════════════════════════════ */
 @keyframes fade-up {

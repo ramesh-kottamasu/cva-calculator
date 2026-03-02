@@ -44,6 +44,14 @@ export interface TradeInput {
   irs_payment_freq: number;
 }
 
+export interface Sensitivity {
+  label: string;
+  bump: string;
+  delta_cva: number;
+  delta_dva: number;
+  delta_bcva: number;
+}
+
 export interface ExposureResponse {
   time_grid: number[];
   ee: number[];
@@ -59,6 +67,7 @@ export interface ExposureResponse {
   pfe_confidence: number;
   sim_model: string;
   product: string;
+  sensitivities: Sensitivity[];
 }
 
 /** Flattened row for Recharts */

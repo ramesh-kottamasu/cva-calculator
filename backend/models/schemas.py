@@ -94,6 +94,14 @@ class TradeInput(BaseModel):
         return self
 
 
+class Sensitivity(BaseModel):
+    label: str                 # e.g. "CS01 (Cpty)", "Spot Δ"
+    bump: str                  # human-readable bump description
+    delta_cva: float           # Δ CVA (+ = cost increases)
+    delta_dva: float           # Δ DVA (+ = benefit increases)
+    delta_bcva: float          # Δ BCVA = Δ CVA − Δ DVA
+
+
 class ExposureResponse(BaseModel):
     time_grid: list[float]
     ee: list[float]
@@ -109,3 +117,4 @@ class ExposureResponse(BaseModel):
     pfe_confidence: float
     sim_model: str
     product: str
+    sensitivities: list[Sensitivity] = []

@@ -3,6 +3,7 @@ import { useExposure } from './hooks/useExposure';
 import { InputForm } from './components/InputForm';
 import { ExposureChart } from './components/ExposureChart';
 import { SummaryPanel } from './components/SummaryPanel';
+import { SensitivitiesPanel } from './components/SensitivitiesPanel';
 import { LoadingSpinner } from './components/LoadingSpinner';
 import { DEFAULTS } from './components/InputForm';
 import './App.css';
@@ -44,6 +45,7 @@ export default function App() {
             <>
               <SummaryPanel data={data} />
               <ExposureChart data={data} />
+              <SensitivitiesPanel data={data} />
             </>
           )}
         </main>
