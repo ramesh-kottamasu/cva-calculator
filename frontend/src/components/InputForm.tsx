@@ -241,7 +241,7 @@ export function InputForm({ onSubmit, disabled }: Props) {
   /** Convert stored value → formatted display value */
   function dv(name: keyof TradeInput): number | string {
     const raw = values[name];
-    if (typeof raw !== 'number') return raw;
+    if (typeof raw !== 'number') return raw as string;
     if (VOL_VARIANCE_FIELDS.has(name)) {
       return parseFloat((Math.sqrt(raw) * 100).toPrecision(10));
     }
