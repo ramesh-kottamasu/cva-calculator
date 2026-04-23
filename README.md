@@ -4,6 +4,8 @@ A Monte Carlo Credit Valuation Adjustment (CVA) calculator for **FX Forwards** a
 
 Built with a FastAPI backend and a React + TypeScript frontend.
 
+APP Link: https://cva-calculator.vercel.app/
+
 ---
 
 ## Features
